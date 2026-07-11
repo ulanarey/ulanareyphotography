@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ulanareyphotography.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/kauai.jpg</image:loc><image:title>Kauai — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/santorini.jpg</image:loc><image:title>Santorini — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/positano.jpg</image:loc><image:title>Positano — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/punta-mita.jpg</image:loc><image:title>Punta Mita — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/mykonos.jpg</image:loc><image:title>Mykonos — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/venice.jpg</image:loc><image:title>Venice — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/rome.jpg</image:loc><image:title>Rome — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/prague.jpg</image:loc><image:title>Prague — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/amsterdam.jpg</image:loc><image:title>Amsterdam — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/lake-tahoe.jpg</image:loc><image:title>Lake Tahoe — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/bora-bora.jpg</image:loc><image:title>Bora Bora — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/turks-and-caicos.jpg</image:loc><image:title>Turks and Caicos — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/milan.jpg</image:loc><image:title>Milan — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/jumby-bay.jpg</image:loc><image:title>Jumby Bay — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/hualalai.jpg</image:loc><image:title>Hualalai — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/lanai.jpg</image:loc><image:title>Lanai — travel photograph by Ulana Rey</image:title></image:image>
+    <image:image><image:loc>https://ulanareyphotography.com/images/full/florence.jpg</image:loc><image:title>Ulana Rey in Florence</image:title></image:image>
+  </url>
+</urlset>

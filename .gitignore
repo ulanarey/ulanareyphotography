@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Internal working files — never publish to this repo.
+# The repo is public (GitHub Pages); only the website itself belongs here.
+tasks/
+Photos used/
+claude-code-handoff-ulanareyphotography.md
+CLAUDE.md
+DEPLOY.md

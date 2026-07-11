@@ -1,0 +1,5 @@
+# ulanareyphotography.com — permissive for search and AI crawlers
+User-agent: *
+Allow: /
+
+Sitemap: https://ulanareyphotography.com/sitemap.xml

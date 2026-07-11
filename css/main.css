@@ -1,0 +1,237 @@
+/* ============================================================
+   Light Archive — ulanareyphotography.com
+   Base: near-black charcoal · Ink: warm off-white
+   --accent is set live by JS from each photo's dominant hue
+   ============================================================ */
+
+:root {
+  --bg: #0e0e10;
+  --ink: #f4f1ea;
+  --ink-dim: rgba(244, 241, 234, 0.62);
+  --accent: #75a6e4; /* replaced at runtime per photo */
+  --display: "Fraunces", Georgia, serif;
+  --grotesk: "Space Grotesk", system-ui, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--grotesk);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 1.2s var(--ease);
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; transition: color 0.3s; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---- WebGL canvas sits behind everything ---- */
+#gl {
+  position: fixed; inset: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- Masthead ---- */
+.masthead {
+  position: relative; z-index: 2;
+  min-height: 100vh; min-height: 100svh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.masthead-kicker {
+  font-family: var(--grotesk);
+  font-size: 0.8rem; font-weight: 400;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: var(--accent);
+  transition: color 1.2s var(--ease);
+  animation: rise 1.2s var(--ease) both;
+}
+.masthead-name {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(4rem, 16vw, 13rem);
+  letter-spacing: 0.02em;
+  line-height: 1.02;
+  margin: 1rem 0 0.5rem;
+  animation: rise 1.2s 0.15s var(--ease) both;
+}
+.masthead-sub {
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--ink-dim);
+  animation: rise 1.2s 0.3s var(--ease) both;
+}
+.masthead-hint {
+  position: absolute; bottom: 2.2rem;
+  font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--ink-dim);
+  animation: sink 2.2s ease-in-out infinite;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes sink { 0%,100% { transform: translateY(0); opacity: .55; } 50% { transform: translateY(8px); opacity: 1; } }
+
+/* ---- Section rail nav ---- */
+.rail {
+  position: fixed; top: 50%; right: 1.4rem;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex; flex-direction: column; gap: 1.1rem;
+}
+.rail a {
+  font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ink-dim); text-decoration: none;
+  writing-mode: vertical-rl;
+}
+.rail a:hover { color: var(--accent); }
+
+/* ---- The Reel ---- */
+.reel { position: relative; z-index: 1; }
+
+.reel-item {
+  position: relative;
+  min-height: 130vh;
+  display: flex; align-items: center; justify-content: center;
+}
+.reel-item img {
+  position: sticky; top: 0;
+  width: 100vw; height: 100vh; height: 100svh;
+  object-fit: cover;
+  display: block;
+}
+/* When WebGL is active, DOM images feed textures but stay hidden visually */
+body.gl-on .reel-item img { opacity: 0; }
+
+.reel-caption {
+  position: absolute; bottom: 8vh; left: 6vw;
+  z-index: 3;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.reel-item.is-active .reel-caption { opacity: 1; transform: none; }
+.reel-caption h3 {
+  font-family: var(--display);
+  font-weight: 300; font-style: italic;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.45);
+}
+.reel-caption p {
+  font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.6rem;
+  transition: color 1.2s var(--ease);
+  text-shadow: 0 1px 12px rgba(0,0,0,0.6);
+}
+.reel-index {
+  position: fixed; bottom: 2rem; left: 6vw; z-index: 4;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72rem; letter-spacing: 0.25em;
+  color: var(--ink-dim);
+  opacity: 0; transition: opacity 0.6s;
+}
+body.in-reel .reel-index { opacity: 1; }
+.reel-index .n { color: var(--accent); transition: color 1.2s var(--ease); }
+
+/* ---- Collections ---- */
+.collections {
+  position: relative; z-index: 2;
+  background: var(--bg);
+  padding: 18vh 6vw 12vh;
+}
+.collections h2, .about h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin-bottom: 0.6rem;
+}
+.collections-lede { color: var(--ink-dim); max-width: 34em; margin-bottom: 5rem; }
+
+.col-group { margin-bottom: 4.5rem; }
+.col-group h3 {
+  font-family: var(--grotesk);
+  font-weight: 400; font-size: 0.78rem;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--ink-dim);
+  border-bottom: 1px solid rgba(244,241,234,0.14);
+  padding-bottom: 0.8rem; margin-bottom: 1.6rem;
+}
+.col-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.2rem;
+}
+.col-grid figure { position: relative; overflow: hidden; border-radius: 2px; }
+.col-grid img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block;
+  filter: saturate(0.92);
+  transform: scale(1.001);
+  transition: transform 1.4s var(--ease), filter 0.8s;
+}
+.col-grid figure:hover img { transform: scale(1.06); filter: saturate(1.05); }
+.col-grid figcaption {
+  position: absolute; inset: auto 0 0 0;
+  padding: 1.6rem 0.9rem 0.7rem;
+  background: linear-gradient(transparent, rgba(10,10,12,0.75));
+  font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+}
+
+/* ---- About ---- */
+.about {
+  position: relative; z-index: 2;
+  background: var(--bg);
+  padding: 10vh 6vw 14vh;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+.about-portrait img { width: 100%; height: auto; display: block; border-radius: 2px; }
+.about-portrait figcaption {
+  margin-top: 0.8rem;
+  font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.about-text p { max-width: 36em; margin-bottom: 1.4rem; font-size: 1.05rem; }
+.about-text h2 { margin-bottom: 1.6rem; }
+.about-links { font-size: 0.9rem; color: var(--ink-dim); }
+
+/* ---- Footer ---- */
+.footer {
+  position: relative; z-index: 2;
+  background: var(--bg);
+  border-top: 1px solid rgba(244,241,234,0.12);
+  padding: 3rem 6vw 3.4rem;
+  font-size: 0.82rem; color: var(--ink-dim);
+  display: flex; flex-wrap: wrap; gap: 0.6rem 3rem;
+  justify-content: space-between;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 820px) {
+  .rail { display: none; }
+  .about { grid-template-columns: 1fr; }
+  .about-portrait { max-width: 420px; }
+  .reel-caption { left: 7vw; bottom: 10vh; }
+}
+
+/* ---- Reduced motion: no WebGL, no animation, plain stills ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  #gl { display: none; }
+  body.gl-on .reel-item img { opacity: 1; }
+}

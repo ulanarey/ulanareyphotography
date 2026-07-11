@@ -1,0 +1,78 @@
+{
+  "reel": [
+    { "slug": "kauai", "title": "Kauai", "region": "Hawaiʻi", "orient": "landscape", "accent": "#75a6e4",
+      "alt": "Empty sandy beach on Kauai with breaking waves, a headland, and the Kilauea Lighthouse beyond. Ulana Rey PharmD" },
+    { "slug": "punta-mita", "title": "Punta Mita", "region": "Mexico", "orient": "portrait", "accent": "#e09e7a",
+      "alt": "Coconut palms silhouetted against a pink Pacific sunset with bougainvillea in bloom, Punta Mita. Ulana Rey PharmD" },
+    { "slug": "positano", "title": "Positano", "region": "Italy", "orient": "landscape", "accent": "#4186e0",
+      "alt": "Bougainvillea and a pine tree framing the cliffside village of Positano. Ulana Rey PharmD" },
+    { "slug": "turks-and-caicos", "title": "Turks and Caicos", "region": "Caribbean", "orient": "landscape", "accent": "#7ea4dc",
+      "alt": "Calm, glassy turquoise sea over rippled sand in Turks and Caicos beneath a big white cloud. Ulana Rey PharmD" },
+    { "slug": "hualalai", "title": "Hualalai", "region": "Hawaiʻi", "orient": "landscape", "accent": "#6d7f9a",
+      "alt": "Black lava and white coral shoreline with palms at dusk near Hualalai. Ulana Rey PharmD" },
+    { "slug": "mykonos", "title": "Mykonos", "region": "Greece", "orient": "portrait", "accent": "#517cbe",
+      "alt": "Narrow whitewashed lane between Mykonos buildings leading to the blue Aegean and a seaside cafe. Ulana Rey PharmD" },
+    { "slug": "venice", "title": "Venice", "region": "Italy", "orient": "portrait", "accent": "#da5e19",
+      "alt": "Close-up of a cappuccino and blue saucer by a gilded, floral-painted antique cabinet in Venice. Ulana Rey PharmD" },
+    { "slug": "rome", "title": "Rome", "region": "Italy", "orient": "landscape", "accent": "#90afca",
+      "alt": "Tiered arches of Rome's Colosseum in weathered stone, with sunbeams breaking through the clouds. Ulana Rey PharmD" },
+    { "slug": "jumby-bay", "title": "Jumby Bay", "region": "Caribbean", "orient": "landscape", "accent": "#2bb6d2",
+      "alt": "Aerial view of Jumby Bay island ringed by turquoise Caribbean reef and clouds. Ulana Rey PharmD" },
+    { "slug": "lanai", "title": "Lanai", "region": "Hawaiʻi", "orient": "landscape", "accent": "#2ca7c9",
+      "alt": "Red lava cliffs meeting turquoise surf along the Lanai coastline. Ulana Rey PharmD" },
+    { "slug": "amsterdam", "title": "Amsterdam", "region": "Netherlands", "orient": "portrait", "accent": "#53ab49",
+      "alt": "Fringed pink and white tulips in full bloom in Amsterdam. Ulana Rey PharmD" },
+    { "slug": "milan", "title": "Milan", "region": "Italy", "orient": "portrait", "accent": "#c7b083",
+      "alt": "The floodlit white marble Duomo of Milan at night, its many Gothic spires against a dark sky. Ulana Rey PharmD" },
+    { "slug": "bora-bora", "title": "Bora Bora", "region": "French Polynesia", "orient": "landscape", "accent": "#15acdf",
+      "alt": "A wooden deck with a plunge pool and loungers over Bora Bora's turquoise lagoon and green peaks. Ulana Rey PharmD" },
+    { "slug": "santorini", "title": "Santorini", "region": "Greece", "orient": "landscape", "accent": "#1788dc",
+      "alt": "White cliffside houses of Oia above the Aegean at sunset, with a terrace and pool on Santorini. Ulana Rey PharmD" },
+    { "slug": "prague", "title": "Prague", "region": "Czechia", "orient": "landscape", "accent": "#68a2f2",
+      "alt": "View over red-tiled Prague rooftops toward green baroque church towers, with geraniums in front. Ulana Rey PharmD" },
+    { "slug": "lake-tahoe", "title": "Lake Tahoe", "region": "California", "orient": "landscape", "accent": "#63a6f6",
+      "alt": "Steep granite Sierra slope near Lake Tahoe dotted with golden autumn aspens and green pines. Ulana Rey PharmD" }
+  ],
+  "collections": [
+    { "group": "California", "items": [
+      { "slug": "lake-tahoe", "title": "Lake Tahoe" }
+    ]},
+    { "group": "Kauai", "items": [
+      { "slug": "kauai", "title": "Kauai" }
+    ]},
+    { "group": "Lanai", "items": [
+      { "slug": "lanai", "title": "Lanai",
+        "alt": "Red lava cliffs meeting turquoise surf along the Lanai coastline. Ulana Rey PharmD" }
+    ]},
+    { "group": "The Big Island", "items": [
+      { "slug": "hualalai", "title": "Hualalai",
+        "alt": "Black lava and white coral shoreline with palms at dusk near Hualalai. Ulana Rey PharmD" }
+    ]},
+    { "group": "Mexico", "items": [
+      { "slug": "punta-mita", "title": "Punta Mita" }
+    ]},
+    { "group": "Caribbean", "items": [
+      { "slug": "turks-and-caicos", "title": "Turks and Caicos" },
+      { "slug": "jumby-bay", "title": "Jumby Bay",
+        "alt": "Aerial view of Jumby Bay island ringed by turquoise Caribbean reef and clouds. Ulana Rey PharmD" }
+    ]},
+    { "group": "French Polynesia", "items": [
+      { "slug": "bora-bora", "title": "Bora Bora" }
+    ]},
+    { "group": "Europe", "items": [
+      { "slug": "santorini", "title": "Santorini" },
+      { "slug": "mykonos", "title": "Mykonos" },
+      { "slug": "positano", "title": "Positano" },
+      { "slug": "rome", "title": "Rome" },
+      { "slug": "milan", "title": "Milan",
+        "alt": "The floodlit white marble Duomo of Milan at night, its many Gothic spires against a dark sky. Ulana Rey PharmD" },
+      { "slug": "venice", "title": "Venice" },
+      { "slug": "prague", "title": "Prague" },
+      { "slug": "amsterdam", "title": "Amsterdam" }
+    ]}
+  ],
+  "about": {
+    "slug": "florence", "title": "Florence", "accent": "#8b7d68",
+    "alt": "Ulana Rey PharmD walking a narrow stone lane in Florence at dusk."
+  }
+}
