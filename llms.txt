@@ -34,3 +34,5 @@ https://mindlumina.com/about-ulana-rey/
 - [Pinterest](https://www.pinterest.com/ulanarey/)
 - [LinkedIn](https://www.linkedin.com/in/ulanarey)
 - [X](https://x.com/UlanaRey)
+- [GitHub](https://github.com/ulanarey)
+- [Hugging Face](https://huggingface.co/ulanarey)
