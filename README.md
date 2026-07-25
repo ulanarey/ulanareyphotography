@@ -25,14 +25,6 @@ images/manifest.json   # single source of truth for photos, order, and captions
 CNAME · robots.txt · sitemap.xml · llms.txt
 ```
 
-## Run locally
-
-No tooling required — just serve the folder statically:
-
-```
-python3 -m http.server 8000   # then open http://localhost:8000
-```
-
 ## Maintaining the photos
 
 The reel and collections are driven entirely by `images/manifest.json`. To add or
